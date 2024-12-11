@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(90, 143, 223);
+}
+.diamond{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.diamond span:nth-child(1){
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-width: 50px;
+    border-style: solid;
+    border-color:transparent rgba(46, 46, 175, 0.765) rgb(38, 38, 78)transparent;
+}
+.diamond span:nth-child(2){
+    position: absolute;
+    left: 100px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-width: 50px;
+    border-style: solid;
+    border-color: blue rgba(46, 46, 175, 0.765) rgb(38, 38, 78) rgb(5, 5, 88);
+    animation: animate 2s linear infinite;
+}
+.diamond span:nth-child(3){
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 0;
+    height: 0;
+    border-width: 50px;
+    border-style: solid;
+    border-color: blue rgba(46, 46, 175, 0.765) rgb(38, 38, 78) rgb(5, 5, 88);
+    animation: animate 2s linear infinite;
+}
+.diamond span:nth-child(4){
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    width: 0;
+    height: 0;
+    border-width: 50px;
+    border-style: solid;
+    border-color: blue rgba(46, 46, 175, 0.765) rgb(38, 38, 78) rgb(5, 5, 88);
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        border-color:rgb(5, 5, 88) blue rgba(46, 46, 175, 0.765) rgb(38, 38, 78) ;
+    }
+    25%{
+        border-color:rgb(38, 38, 78) rgb(5, 5, 88) blue rgba(46, 46, 175, 0.765) ;
+    }
+    50%{
+        border-color:rgba(46, 46, 175, 0.765) rgb(38, 38, 78) rgb(5, 5, 88)blue ;
+    }
+    75%{
+        border-color: blue  rgb(5, 5, 88)rgba(46, 46, 175, 0.765) rgb(38, 38, 78);
+    }
+    100%{
+        border-color:  rgb(38, 38, 78) rgb(5, 5, 88)blue rgba(46, 46, 175, 0.765);
+    }
+}
